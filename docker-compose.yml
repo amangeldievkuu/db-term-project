@@ -103,15 +103,15 @@ services:
     phpmyadmin:
         image: 'phpmyadmin/phpmyadmin:latest'
         ports:
-          - 8081:80
+            - '8081:80'
         environment:
-          MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
         links:
-          - "mysql:db"
+            - 'mysql:db'
         depends_on:
-          - mysql
+            - mysql
         networks:
-          - sail
+            - sail
 networks:
     sail:
         driver: bridge
