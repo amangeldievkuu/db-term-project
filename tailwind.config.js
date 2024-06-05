@@ -6,7 +6,11 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "laracast": "rgb(50, 138, 241)"
+      }
+    },
   },
   plugins: [],
 }
